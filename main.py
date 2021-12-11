@@ -53,9 +53,15 @@ while ex != "0":
         print("Playing the av1 mosaic (closa window to continue)")
         os.system("ffplay mosaic_av1.mkv")
     elif ex=="3":
-        #Command used to stream the BBB video to the IP 192.168.0.35 using the port 23000.
+        #Command used to stream the BBB video to the IP 192.168.0.39 using the port 23000.
         os.system('ffmpeg -i BBB_video.mp4 -qscale 0 -f mpegts udp://192.168.0.39:23000')
         # To see the streaming video input this command in a new terminal window: ffplay udp://192.168.0.39:23000
+    elif ex=="4":
+        print("Input an ip to stream")
+        ip=input()
+        #Command used to stream the BBB video to the desired input using the port 23000.
+        os.system(f'ffmpeg -i BBB_video.mp4 -qscale 0 -f mpegts udp://{ip}:23000')
+        # To see the streaming video input the ffplay command from the previous exercise using the ip you just inputted.
 
     else:
         print(f"Exercise {ex} doesn't exiat")
