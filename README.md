@@ -8,3 +8,6 @@ h265 has the most consistent output regardless of the bitrate, but this means th
 # Ex3: 
 
 In order to see the streamed video you need to change the ip address 192.168.0.39 in the commmand to the local ip of your device. Then input ffplay udp://192.168.0.39:23000 in another terminal window changing again 192.168.0.39 to the same ip address you changed before.
+
+# Ex4: 
+For the stream to work you must use the same ip you inputted in the ffplay command.
